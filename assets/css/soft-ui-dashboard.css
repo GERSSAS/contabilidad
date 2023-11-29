@@ -2757,6 +2757,93 @@ progress {
   transition:  0.2s ease;
 }
 
+.table-bordered{
+  width: 60px;
+  margin: 3px;
+  text-align: centeR;
+  border-radius: 0.5rem;
+  border-top-right-radius: 0.5rem !important;
+  border-bottom-right-radius: 0.5rem !important;
+  border-left-width: 1px;
+}
+
+.table1 thead th{
+  font-size: 14px;
+  color: rgb(40, 53, 110);
+  text-align: center;
+  padding: 2px 1px 0 1px;
+}
+.table1 tbody{
+  border: 1px solid var(--gray-dark);
+}
+.table1 tbody td{
+  text-align: center;
+  padding: 0 7px 0 7px;
+}
+.table1 tfoot{
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid var(--gray-dark);
+}
+.table1 input{
+  border: none;
+  font-size: 16px;
+}
+.table-bordered.input_tabla{
+  width: 80px;
+  margin: 3px;
+  text-align: center;
+  background-color: rgb(215, 216, 228);
+  border-radius: 0.5rem;
+  border-top-right-radius: 0.5rem !important;
+  border-bottom-right-radius: 0.5rem !important;
+  border-left-width: 1px;
+}
+.table-bordered .input_tabla_default{
+  width: 80px;
+  margin: 3px;
+  text-align: center;
+  background-color: rgb(215, 216, 228);
+  border-radius: 0.5rem;
+  border-top-right-radius: 0.5rem !important;
+  border-bottom-right-radius: 0.5rem !important;
+  border-left-width: 1px;
+}
+.table1.input_tabla_long{
+  width: 480px;
+  background-color: rgb(180, 181, 196);
+}
+/* Inputs fantasmas de relleno */
+.table1.oculto{
+  display: none;
+}
+.table1 .input_fantasma{
+  width: 80px;
+  margin: 3px;
+  background: none;
+  background-color: inherit;
+  border-radius: 0.5rem;
+  border-top-right-radius: 0.5rem !important;
+  border-bottom-right-radius: 0.5rem !important;
+  border-left-width: 1px;
+}
+.table1.input_fantasma_short{
+  width: 80px;
+  margin: 3px;
+  background: none;
+  background-color: inherit;
+  border-radius: 0.5rem;
+  border-top-right-radius: 0.5rem !important;
+  border-bottom-right-radius: 0.5rem !important;
+  border-left-width: 1px;
+}
+.table1 .input_fantasma_long{
+  width: 480px;
+  margin: 3px;
+  background: none;
+  background-color: inherit;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .form-control {
     transition: none;
@@ -2932,9 +3019,9 @@ textarea.form-control-lg {
 }
 
 .form-select:focus {
-  border-color: #e293d3;
+  border-color: #21D4FD;
   outline: 0;
-  box-shadow: 0 0 0 2px #e9aede;
+  box-shadow: 0 0 0 2px #21D4FD;
 }
 
 .form-select[multiple],
