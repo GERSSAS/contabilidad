@@ -1,33 +1,33 @@
 
 <?php include("template/header.php"); ?>
 <h2>Modulo antincipos Usuario Publico</h2>
-<form action="edit.php?id=<?php echo $_GET['id']; ?>" method="POST">
+<form >
 
         <div class="form-control">
           <div class="row">   
             <div class="row">
               <div class="col-6">
               <label for="nombre">Nombre:</label>
-              <input id="nombre" name="nombre" type="text" required class="form-control">
+              <input id="nombre" name="nombre" type="text" required class="form-control form-control-sm">
             </div>
           <div class="col-3">
               <label for="cedula">Cedula:</label>
-              <input id="cedula" name="cedula" type="text"  required class="form-control">
+              <input id="cedula" name="cedula" type="text"  required class="form-control form-control-sm">
               </div>
               <div class="col-3">
                 <label for="ciudad">Ciudad:</label>
-                <input id="ciudad" name="ciudad" type="text" class="form-control">
+                <input id="ciudad" name="ciudad" type="text" class="form-control form-control-sm">
               </div>
                                  
             </div>
             <div class="row">
             <div class="col-6">
               <label for="correo">Correo:</label>
-              <input id="correo" name="correo" type="email" placeholder="@gers.com" required class="form-control">                     
+              <input id="correo" name="correo" type="email" placeholder="@gers.com" required class="form-control form-control-sm">                     
             </div>
             <div class="col-3">
               <label for="periodo">Período:</label>
-              <input id="periodo" name="periodo" type="text" class="form-control" >
+              <input id="periodo" name="periodo" type="text" class="form-control form-control-sm" >
             </div>  
             <div class="col-3">
               <label>Moneda:</label>
@@ -40,7 +40,7 @@
           <div class="row">
             <div class="col-6">
               <label for="jefe" class="form-label">JEFE</label>
-              <select name="jefe" id="jefe" class="form-select" aria-label=".form-select-sm example">
+              <select name="jefe" id="jefe" class="form-select form-select-sm" aria-label=".form-select-sm example">
                   <option value=""></option>
                   <option value="alba.naranjo@gers.com">ALBA NARANJO</option>
                   <option value="andres.insuasty@gers.com">ANDRES INSUASTY</option>
@@ -58,7 +58,7 @@
             
             <div class="col-6">
               <label for="area" class="form-label">Area:</label>
-              <select name="area" id="area" class="form-select" aria-label=".form-select-sm example">
+              <select name="area" id="area" class="form-select form-select-sm" aria-label=".form-select-sm example">
                   <option value=""></option>
                   <option value="ADMINISTRACION">ADMINISTRACIÓN</option>
                   <option value="EPC CONSTRUCCION DE PROYECTOS">EPC CONSTRUCCIÓN DE PROYECTO</option>
@@ -76,90 +76,86 @@
           <div class="row">
             <div class="col-6">
           <label>Fecha de solicitud:</label>
-          <input id="fecha_solicitud" name="fecha_solicitud" type="date" class="form-control">
+          <input id="fecha_solicitud" name="fecha_solicitud" type="date" class="form-control form-control-sm">
             </div>                    
             <div class="col-6">
           <label>Fecha de entrega:</label>
-          <input id="fecha_entrega" name="fecha_entrega" type="date" class="form-control">
+          <input id="fecha_entrega" name="fecha_entrega" type="date" class="form-control form-control-sm">
             </div>          
           </div>
         </div>
         <br>
         <br>
-   
-        <div class="form-control">
-        <table class="table table-bordered">
-        <thead>
-            <tr>
-              <th scope="col">FECHA</th>
-              <th scope="col">DESAYUNO</th>
-              <th scope="col">ALMUERZO</th>
-              <th scope="col">COMIDA</th>
-              <th scope="col">SUPLEMENTO</th>
-              <th scope="col">TRANSPORTE</th>
-              <th scope="col">ALOJAMIENTO</th>
-              <th scope="col">OTRO</th>
-              <th >TOTAL</th>
-              <th id="trmHeader" scope="col">TRM</th>
-              <th id="trmHeaderTwo">VR.PESOS</th>
-       
-              <th></th>
-            </tr>
-        </thead>
-        <tbody>
-          <tr>
-             <!-- numera Fila oculta -->
-            <td scope="row"><input name="fecha[]" type="date" class="input_tabla_default"></td>
-            <td class="row"><input type="number" value="" name="fila[]" class="input_tabla" readonly></td>
-            <td scope="row"><input name="desayuno[]" id="desayuno[]" type="number" step="0.01" class="input_tabla"></td>
-            <td scope="row"><input name="almuerzo[]" id="almuerzo[]" type="number" step="0.01" class="input_tabla"></td>
-            <td scope="row"><input name="comida[]" id="comida[]" type="number" step="0.01" class="input_tabla"></td>
-            <td scope="row"><input name="suplemento[]" id="suplemento[]" type="number" step="0.01" class="input_tabla"></td>
-            <td scope="row"><input name="transporte[]" id="transporte[]" type="number" step="0.01" class="input_tabla"></td>
-            <td scope="row"><input name="alojamiento[]" id="alojamiento[]" type="number" step="0.01" class="input_tabla"></td>
-            <td scope="row"><input name="otro[]" id="otro[]" type="number" step="0.01" class="input_tabla"></td>
-            <td scope="row"><input name="total_fila[]" id="total_fila[]" class="input_tabla_default" step="0.01" readonly></td>
-            <td style="display: none;" scope="row" id="trmColumn${i}"><input name="trm[]" id="trm[]" type="number" class="input_tabla_default" step="0.01" readonly></td>
-            <td style="display: none;" scope="row" id="trmColumn${i}"><input name="total_pesos[]" id="total_pesos[]" class="input_tabla_default" step="0.01" readonly></td>
-            
-            <td><div class="agregar"><button class="btn add-btn btn-info">+</button></div></td>
-          </tr>
-        </tbody>
-      </table>
-      <!-- Nueva fila dinamica  -->
-      <div class="newData"></div>
-      <!-- Mostrar  Subtotales & Total -->
-      <table class="table table-bordered">
-        <tr>
-          <td><input value="Subtotales" type="text" class="input_tabla_default" readonly></td>
-          <td><input class="input_tabla_default" type="text" id="subtotal_desayuno" name="subtotal_desayuno" readonly></td>
-          <td><input class="input_tabla_default" type="text" id="subtotal_almuerzo" name="subtotal_almuerzo" readonly></td>
-          <td><input class="input_tabla_default" type="text" id="subtotal_comida" name="subtotal_comida" readonly></td>
-          <td><input class="input_tabla_default" type="text" id="subtotal_suplemento" name="subtotal_suplemento" readonly></td>
-          <td><input class="input_tabla_default" type="text" id="subtotal_transporte" name="subtotal_transporte" readonly></td>
-          <td><input class="input_tabla_default" type="text" id="subtotal_alojamiento" name="subtotal_alojamiento" readonly></td>
-          <td><input class="input_tabla_default" type="text" id="subtotal_otro" name="subtotal_otro" readonly></td>
 
-          <td><input type="number" class="input_fantasma" readonly></td> 
-          <td style="display: none;" id="trmColumn${i}"><input type="number" class="input_fantasma" readonly></td> 
-          <td style="display: none;" id="trmColumn${i}"><input type="number" class="input_fantasma" readonly></td> 
-         
-          
-          <td><input type="number" class="input_fantasma_short" readonly></td> 
-        </tr>
-         <tr>
-          <td colspan="7" style="text-align: right;">TOTAL $</td>
-          <td><input id="total" name="total" class="input_tabla_default" type="text" readonly></td>
-          <td style="display: none;" id="trmColumn${i}">T.PESOS</td>
-          <td style="display: none;" id="trmColumn${i}"><input id="total_pesos_sum" name="total_pesos_sum" class="input_tabla_default" type="text" readonly></td>
-        </tr>
-      </table>
-        </div>
+        <div class="container table-responsive">
+      
+      <table class="table table-sm">
+    <thead class="table-light">
+                      <tr>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-6">FECHA</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">DESAYUNO</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">ALMUERZO</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">COMIDA</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-6">SUPLEMENTO</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-6">TRANSPORTE</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-6">ALOJAMIENTO</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">OTRO</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">TOTAL</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">TRM</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">VAL-PESOS</th>
+                       
+                      </tr>
+  
+                  
+                      </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                    <tr class="tr-inputs">
+        <th>
+        <div><input class="form-control form-control-sm" type="date" readonly></div>
+        </th>
+        <th>
+          <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
+        </th>
+        <th>
+        <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
+        </th>
+        <th>
+        <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
+        </th>
+        <th>
+        <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
+        </th>
+        <th>
+        <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
+        </th>
+        <th>
+        <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
+        </th>
+        <th>
+        <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
+        </th>
+        <th>
+        <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
+        </th>
+        <th>
+        <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
+        </th>
+        <th>
+        <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
+        </th>
+        <th><button class="btn btn-primary btn-sm">+</button></th>
+      
+  
+                    </tbody>
+                  </table>
+  </DIV>
+              
       <br>
-      <div class="enviar">
-                          <h6>Seleccione imagen a cargar</h6>
-                          <input  id="cartapresentacion" type="file" name="usu_img" class="eme2 estiloinput" required>
-                      </div>
+      <div class="mb-3">
+  <label for="formFileMultiple" class="form-label">Cargar archivos</label>
+  <input class="form-control" type="file" id="formFileMultiple" multiple>
+</div>
 
         
          <div class="row">
@@ -174,9 +170,16 @@
          </div>
                       
       <!-- BOTON ENVIAR -->
-        <div class="enviar">
-          <button name="enviar" id="enviar" class="submit">Enviar</button>
+        <div class="">
+         
+          <button name="enviar" id="enviar"class="btn btn-outline-info">Enviar</button>
         </div>
         <br>
     </form>
+
+
+
+   
+
+    <script src="../../../../assets/js/funtions_anticipo.js" type="text/javascript"></script>
 <?php include("template/footer.php"); ?>
