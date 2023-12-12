@@ -1,12 +1,16 @@
 <?php include("template/header.php"); ?>
-<h2>Modulo Relacion de Gastos Usuario Publico</h2>
+
 <div class="container-fluid">
+  <div class="text-center p-3">
+  <h2>Relacion de Gastos</h2>
+  </div>
+
 <div class="card mb-5">
-<div class="card-header bg-primary">
+<div class="card-header bg-primary text-light">
 GASTOS DE ADMINISTRACIÓN
   </div>
   <div class="card-body">
-<table class="table">
+<table class="table table-responsive">
   <thead>
     <tr>
       <th scope="col">CÓDIGO</th>
@@ -35,8 +39,8 @@ GASTOS DE ADMINISTRACIÓN
     </tr>
     <tr>
       <td></td>
-      <td></td>
-      <td>TOTAL $:<input type="number"></td>
+      <td>TOTAL $:</td>
+      <td><input type="number"></td>
     </tr>
   </tbody>
 </table>
@@ -44,11 +48,11 @@ GASTOS DE ADMINISTRACIÓN
 </div>
 
 <div class="card">
-<div class="card-header  bg-primary">
+<div class="card-header  bg-primary text-light">
 GASTOS DE CONTRATOS
   </div>
   <div class="card-body">
-<table class="table">
+<table class="table table-responsive">
   <thead>
     <tr>
       <th scope="col">CÓDIGO</th>
@@ -77,8 +81,8 @@ GASTOS DE CONTRATOS
     </tr>
     <tr>
       <td scope="row"></td>
-      <td colspan=""></td>
-      <td>TOTAL $:<input type="number"></td>
+      <td colspan="">TOTAL $:</td>
+      <td><input type="number"></td>
     </tr>
   </tbody>
 </table>
