@@ -12,7 +12,7 @@
             </div>
           <div class="col-3">
               <label for="cedula">Cedula:</label>
-              <input id="cedula" name="cedula" type="text"  required class="form-control form-control-sm">
+              <input id="cedula" name="cedula" type="number"  required class="form-control form-control-sm">
               </div>
               <div class="col-3">
                 <label for="ciudad">Ciudad:</label>
@@ -152,23 +152,24 @@
   </DIV>
               
       <br>
-      <div class="mb-3">
-  <label for="formFileMultiple" class="form-label">Cargar archivos</label>
-  <input class="form-control" type="file" id="formFileMultiple" multiple>
+      <div class="row">
+      <div class="col-6">
+  <label for="formFileMultiple" class="form-label">CARGAR ARCHIVOS</label>
+  <input class="form-control form-control-sm" type="file" id="formFileMultiple" multiple>
+</div>
+          
+           <div class="col-3">
+              <label for="efectivo">EFECTIVO:</label>
+              <input id="efectivo" name="efectivo" type="number"  required class="form-control form-control-sm">
 </div>
 
-        
-         <div class="row">
-           <div clas="col-6">
-          <label>Efectivo:</label>
-          <input id="efectivo" name="efectivo" type="number" class="form-control">
-           </div>
-         <div clas="col-6">
-          <label>Consignar:</label>
-          <input id="consignar" name="consignar" type="number" class="form-control">
+          <div class="col-3">
+              <label for="consignar">CONSIGNAR:</label>
+              <input id="consignar" name="consignar" type="number"  required class="form-control form-control-sm">
+              </div>
          </div>
-         </div>
-                      
+                   <br>
+                   <br>    
       <!-- BOTON ENVIAR -->
         <div class="">
          
