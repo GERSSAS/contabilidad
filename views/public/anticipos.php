@@ -112,37 +112,37 @@
                     <tbody class="table-group-divider">
                     <tr class="tr-inputs">
         <th>
-        <div><input class="form-control form-control-sm" type="date" readonly></div>
+        <div><input class="form-control form-control-sm" type="date" ></div>
         </th>
         <th>
-          <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
+          <div><input class="form-control form-control-sm" type="number" ></div>
         </th>
         <th>
-        <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
+        <div><input class="form-control form-control-sm" type="number" ></div>
         </th>
         <th>
-        <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
+        <div><input class="form-control form-control-sm" type="number" ></div>
         </th>
         <th>
-        <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
+        <div><input class="form-control form-control-sm" type="number" ></div>
         </th>
         <th>
-        <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
+        <div><input class="form-control form-control-sm" type="number" ></div>
         </th>
         <th>
-        <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
+        <div><input class="form-control form-control-sm" type="number" ></div>
         </th>
         <th>
-        <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
+        <div><input class="form-control form-control-sm" type="number" ></div>
         </th>
         <th>
-        <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
+        <div><input class="form-control form-control-sm" type="number" ></div>
         </th>
         <th>
-        <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
+        <div><input class="form-control form-control-sm" type="number" ></div>
         </th>
         <th>
-        <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
+        <div><input class="form-control form-control-sm" type="number" ></div>
         </th>
         <th><button class="btn btn-primary btn-sm">+</button></th>
       
@@ -153,17 +153,14 @@
               
       <br>
       <div class="row">
-      <div class="col-6">
-  <label for="formFileMultiple" class="form-label">CARGAR ARCHIVOS</label>
-  <input class="form-control form-control-sm" type="file" id="formFileMultiple" multiple>
-</div>
+
           
-           <div class="col-3">
+           <div class="col-6">
               <label for="efectivo">EFECTIVO:</label>
               <input id="efectivo" name="efectivo" type="number"  required class="form-control form-control-sm">
 </div>
 
-          <div class="col-3">
+          <div class="col-6">
               <label for="consignar">CONSIGNAR:</label>
               <input id="consignar" name="consignar" type="number"  required class="form-control form-control-sm">
               </div>

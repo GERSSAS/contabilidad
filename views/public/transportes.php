@@ -112,23 +112,23 @@
                     <tbody class="table-group-divider">
                     <tr class="tr-inputs">
                     <th>
-          <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
+          <div><input class="form-control form-control-sm" type="number" ></div>
         </th>
         <th>
-        <div><input class="form-control form-control-sm" type="date" readonly></div>
+        <div><input class="form-control form-control-sm" type="date" ></div>
         </th>
         
         <th>
-        <div><input class="form-control form-control-sm" type="TEXT" placeholder="" readonly></div>
+        <div><input class="form-control form-control-sm" type="TEXT" ></div>
         </th>
         <th>
-        <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
+        <div><input class="form-control form-control-sm" type="number" ></div>
         </th>
         <th>
-        <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
+        <div><input class="form-control form-control-sm" type="number"></div>
         </th>
         <th>
-        <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
+        <div><input class="form-control form-control-sm" type="number"></div>
         </th>
       
         <th><button class="btn btn-primary btn-sm">+</button></th>
@@ -137,6 +137,13 @@
                     </tbody>
                   </table>
   </DIV>
+
+ 
+      <div class="col-6">
+  <label for="formFileMultiple" class="form-label">CARGAR ARCHIVOS</label>
+  <input class="form-control form-control-sm" type="file" id="formFileMultiple" multiple>
+</div>
+<br>
   <div class="">
          
           <button name="enviar" id="enviar"class="btn btn-outline-info">Enviar</button>

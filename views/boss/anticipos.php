@@ -1,37 +1,21 @@
 <?php include("template/header.php"); ?>
-<div class="form-control">
-
-                    <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
-                        <h6 class="text-white text-capitalize ps-3">LISTA DE ANTICIPOS</h6>
-                    </div>
-              
-<div class="card-body px-0 pt-0 pb-2">
-  
-              <div class="table-responsive p-0">
-                <table class="table align-items-center mb-0">
-                  <thead>
-                    <tr>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">FECHA SOLICITUD</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">CODIGO</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">NOMBRE</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">CEDULA</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">CIUDAD</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">VALOR</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">ESTADO</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">VER|EDITAR</th>
-                      
-                      
-                    
-                    
-                    
-                    
-                    </tr>
-                  </thead>
-                  <tbody>
-
-</div>
-</div>
-</div>
-
-
-<?php include("template/footer.php"); ?>
+<div class="card mb-5">
+<div class="card-header bg-primary text-light">
+ANTICIPOS
+  </div>
+  <div class="card-body">
+<table class="table table-responsive">
+  <thead>
+    <tr>
+    <th scope="col">FECHA </th>
+      <th scope="col">CODIGO</th>
+      <th scope="col">NOMBRE </th>
+      <th scope="col">CEDULA </th>
+      <th scope="col">CIUDAD </th>
+      <th scope="col">VALOR </th>
+      <th scope="col">ESTADO </th>
+      <th scope="col">VER|EDITAR </th>
+     
+    </tr>
+  </thead>
+</DIV>

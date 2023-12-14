@@ -89,69 +89,62 @@
   <br>
   <br>
         <div class="container table-responsive">
-      <table class="table table-sm">
-    <thead class="table-light">
-                      <tr>
-                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-6">FECHA</th>
-                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">DESAYUNO</th>
-                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">ALMUERZO</th>
-                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">COMIDA</th>
-                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-6">SUPLEMENTO</th>
-                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-6">TRANSPORTE</th>
-                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-6">ALOJAMIENTO</th>
-                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">OTRO</th>
-                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">TOTAL</th>
-                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">TRM</th>
-                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">VAL-PESOS</th>
-                       
-                      </tr>
-  
-                  
-                      </tr>
-                    </thead>
-                    <tbody class="table-group-divider">
-                    <tr class="tr-inputs">
-        <th>
-        <div><input class="form-control form-control-sm" type="date" readonly></div>
-        </th>
-        <th>
-          <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
-        </th>
-        <th>
-        <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
-        </th>
-        <th>
-        <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
-        </th>
-        <th>
-        <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
-        </th>
-        <th>
-        <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
-        </th>
-        <th>
-        <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
-        </th>
-        <th>
-        <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
-        </th>
-        <th>
-        <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
-        </th>
-        <th>
-        <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
-        </th>
-        <th>
-        <div><input class="form-control form-control-sm" type="number" placeholder="" readonly></div>
-        </th>
-        <th><button class="btn btn-primary btn-sm">+</button></th>
+        <table class="table table-sm">
+  <thead class="table-light">
+    <tr>
+      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-6">FECHA</th>
+      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">CONTRATOS</th>
+      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">DESAYUNO</th>
+      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">ALMUERZO</th>
+      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">COMIDA</th>
+      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-6">SUPLEMENTO</th>
+      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">TOTAL</th>
+      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">TRM</th>
+      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">VAL-PESOS</th>
       
-  
-                    </tbody>
-                  </table>
+  </thead>
+  <tbody class="table-group-divider">
+    <tr class="tr-inputs">
+      <td>
+        <div><input class="form-control form-control-sm" type="date"></div>
+      </td>
+      <td>
+        <div><input class="form-control form-control-sm" type="number" ></div>
+      </td>
+      <td>
+        <div><input class="form-control form-control-sm" type="number" ></div>
+      </td>
+      <td>
+        <div><input class="form-control form-control-sm" type="number" ></div>
+      </td>
+      <td>
+        <div><input class="form-control form-control-sm" type="number" ></div>
+      </td>
+      <td>
+        <div><input class="form-control form-control-sm" type="number" ></div>
+      </td>
+      <td>
+        <div><input class="form-control form-control-sm" type="number" ></div>
+      </td>
+      <td>
+        <div><input class="form-control form-control-sm" type="number" ></div>
+      </td>
+      <td>
+        <div><input class="form-control form-control-sm" type="number" ></div>
+      </td>
+      <td>
+        <button class="btn btn-primary btn-sm">+</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
   </DIV>
-              
-
+<br>
+      <div class="col-6">
+  <label for="formFileMultiple" class="form-label">CARGAR ARCHIVOS</label>
+  <input class="form-control form-control-sm" type="file" id="formFileMultiple" multiple>
+</div>  
+<br>
     <div class="">
          
          <button name="enviar" id="enviar"class="btn btn-outline-info">Enviar</button>
