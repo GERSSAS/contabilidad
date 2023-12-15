@@ -40,6 +40,7 @@ $url_base = "http://".$_SERVER['HTTP_HOST']."/contabilidad/";
     </div>
     <hr class="horizontal dark mt-0">
     <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+      
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link  active" href="<?php echo $url_base;?>views/admin/indexAdmin.php">
