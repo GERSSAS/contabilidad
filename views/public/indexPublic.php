@@ -1,5 +1,7 @@
 <?php include("template/header.php");?>
-<h1>Inicio Uusario Publico</h1>
+<br>
+<h3 style="text-align: center;">INICIO </h3>
+<br>
 <div class="row">
         <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
           <div class="card">

@@ -25,6 +25,13 @@
   <script src="../../assets/js/plugins/perfect-scrollbar.min.js"></script>
   <script src="../../assets/js/plugins/smooth-scrollbar.min.js"></script>
   <script src="../../assets/js/plugins/chartjs.min.js"></script>
+  <script src="../../assets/js/main.js"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
+  
+<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+
   <script>
     var ctx = document.getElementById("chart-bars").getContext("2d");
 
@@ -205,7 +212,6 @@
     }
   </script>
   <!-- Github buttons -->
-  <script async defer src="../../https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="../../assets/js/soft-ui-dashboard.min.js?v=1.0.7"></script>
 </body>

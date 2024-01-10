@@ -1,15 +1,16 @@
 <?php include("template/header.php"); ?>
-
+<br>
 <div class="container-fluid">
-  <div class="text-center p-3">
-  <h2>Relacion de Gastos</h2>
-  </div>
+<h3 style="text-align: center;">Relacion De Gastos</h3>
 
+<br>
 <div class="card mb-5">
-<div class="card-header bg-primary text-light">
-GASTOS DE ADMINISTRACIÓN
-  </div>
-  <div class="card-body">
+<div class="card-header bg-primary text-light" style="text-align: center;">
+    <strong>GASTOS DE ADMINISTRACIÓN</strong>
+</div>
+
+
+<div class="card-body">
 <table class="table table-responsive">
   <thead>
     <tr>
@@ -97,9 +98,10 @@ GASTOS DE ADMINISTRACIÓN
 </div>
 
 <div class="card">
-<div class="card-header  bg-primary text-light">
-GASTOS DE CONTRATOS
-  </div>
+<div class="card-header bg-primary text-light" style="text-align: center;">
+    <strong>GASTOS DE CONTRATOS</strong>
+</div>
+
   <div class="card-body">
 <table class="table table-responsive">
   <thead>

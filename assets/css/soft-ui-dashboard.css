@@ -67,7 +67,7 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 103, 116, 142;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: Open Sans;
+  --bs-font-sans-serif: arial;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
@@ -10673,7 +10673,7 @@ fieldset:disabled .btn {
 }
 
 .text-secondary {
-  color: #8392AB !important;
+  color: #000 !important;
 }
 
 .text-success {
@@ -20439,7 +20439,7 @@ fieldset:disabled .btn {
 
 .btn {
   margin-bottom: 1rem;
-  letter-spacing: -0.025rem;
+  letter-spacing: -0.040rem;
   text-transform: uppercase;
   box-shadow: 0 4px 7px -1px rgba(0, 0, 0, 0.11), 0 2px 4px -1px rgba(0, 0, 0, 0.07);
   background-size: 150%;
@@ -21018,7 +21018,7 @@ fieldset:disabled .btn {
 }
 
 .card .card-body {
-  font-family: "Open Sans";
+  font-family: "arial";
   padding: 1.5rem;
 }
 
@@ -21798,7 +21798,7 @@ fieldset:disabled .btn {
 
 label,
 .form-label {
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
   color: #344767;
@@ -24845,7 +24845,7 @@ h1,
 .h1 {
   font-size: 3rem;
   line-height: 1.25;
-  letter-spacing: -0.025rem;
+  letter-spacing: -0.040rem;
 }
 
 @media (max-width: 575.98px) {
@@ -24982,7 +24982,7 @@ h4,
 }
 
 a {
-  letter-spacing: -0.025rem;
+  letter-spacing: -0.040rem;
   color: #344767;
 }
 
@@ -25025,7 +25025,7 @@ p {
 }
 
 .text-sans-serif {
-  font-family: "Open Sans" !important;
+  font-family: "arial" !important;
 }
 
 .text-monospace {
