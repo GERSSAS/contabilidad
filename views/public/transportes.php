@@ -144,7 +144,7 @@
                             <div><input class="form-control form-control-sm inputValor" id="valor1" type="number"></div>
                         </th>
                         <th>
-                            <div><input class="form-control form-control-sm trmRow" id="trm1" type="number"></div>
+                            <div><input class="form-control form-control-sm trmRow" id="trm1" type="text"></div>
                         </th>
                         <th>
                             <div><input class="form-control form-control-sm" id="valorPesos1" type="number"></div>
