@@ -20,5 +20,5 @@ if($conn->connect_error){
         }else{
             echo "<script>alert('Usuario no registrado!');</script>";
             header("Location: login.php");
-        }               
+        }
 ?>

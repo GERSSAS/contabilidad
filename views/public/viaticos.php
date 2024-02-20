@@ -157,7 +157,7 @@
                             <div><input class="form-control form-control-sm font-weight-bold" id="trm1" type="text"></div>
                         </td>
                         <td>
-                            <div><input class="form-control form-control-sm font-weight-bold"  id="valorPesos1" type="number"></div>
+                            <div><input class="form-control form-control-sm font-weight-bold"  id="valorPesos1" type="text"></div>
                         </td>
                         <td>
                         <i id="addRowViaticos" class="deleteRow bi bi-plus-circle-fill"></i>
