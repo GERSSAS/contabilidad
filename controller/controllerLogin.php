@@ -1,6 +1,6 @@
 <?php
 
-include("dbconecction/Model.php");
+include("dbconection/Model.php");
 
 $objeto = new MasterModel();
 

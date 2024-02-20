@@ -1,3 +1,8 @@
+<?php
+include("dbconection/dbConection.php");
+include("controller/controllerLogin.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,10 +39,6 @@
                                 <h3 class="font-weight-bolder text-info text-gradient">INICIAR SESION</h3>
                             </div>
                             <div class="card-body">
-                                <?php 
-                                include("dbconecction/dbConection.php");
-                                include("controller/controllerLogin.php");
-                                ?>
                                 <form method="post" role="form">
                                     <label for="correo">CORREO</label>
                                     <div class="mb-3">

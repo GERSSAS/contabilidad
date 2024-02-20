@@ -8,6 +8,10 @@ body {
     padding: 0;
 }
 
+<<<<<<< HEAD
 .background-image{
+=======
+.background-image {
+>>>>>>> main
     background-image: url('../img/curved-images/curved6.jpg');
 }

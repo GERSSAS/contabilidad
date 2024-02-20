@@ -1,4 +1,4 @@
-<!-- 
+<?php
 
     class Connection 
     {
@@ -14,7 +14,7 @@
             $this->connect();
         }
         private function setConnect(){
-            require_once 'conf.php';
+            require_once 'config.php';
             $this->server=$server;
             $this->user=$user;
             $this->pass=$pass;
@@ -36,4 +36,5 @@
             mysqli_close($this->link);
         }
     }
- -->
+
+?>
