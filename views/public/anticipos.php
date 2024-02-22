@@ -1,8 +1,12 @@
-<?php include("template/header.php"); ?>
+<?php 
+include_once '../../lib/helpers.php';
+include("template/header.php"); 
+
+?>
 <br>
 <h3 style="text-align: center;">Modulo Anticipos </h3>
 
-<form>
+<form data-url="<?php echo getUrl("Anticipos","anticipos","CrearAnticipo",false,"ajax") ?>" id="formulario_anticipo"  method="post"  enctype="multipart/form-data">
 
   <div class="pagina">
     <br>
@@ -49,8 +53,8 @@
       <div class="col-3">
         <label>Moneda:</label>
         <select id="moneda" name="moneda" class="form-select form-select-sm">
-          <option value="Peso_colombiano" class="form-control">$Peso colombiano</option>
-          <option value="Dólar USD">$Dolar USD</option>
+          <option value="1" class="form-control">$Peso colombiano</option>
+          <option value="2">$Dolar USD</option>
         </select>
       </div>
     </div>
@@ -62,7 +66,7 @@
         <label for="jefe" class="form-label">Jefe</label>
         <select name="jefe" id="jefe" class="form-select form-select-sm" aria-label=".form-select-sm example">
           <option value=""></option>
-          <option value="alba.naranjo@gers.com">ALBA NARANJO</option>
+          <option value="1">ALBA NARANJO</option>
           <option value="andres.insuasty@gers.com">ANDRES INSUASTY</option>
           <option value="dagoberto.valencia@gers.com">DAGOBERTO VALENCIA</option>
           <option value="fabio.perea@gers.com">FABIO PEREA</option>
@@ -144,34 +148,34 @@
             <div><input class="form-control form-control-sm inputDate" id="idDateAnticipos1" type="date"></div>
           </th>
           <th>
-            <div><input class="form-control form-control-sm" type="number"></div>
+            <div><input class="form-control form-control-sm sumRow" id="idDesayuno1" type="number" value=0></div>
           </th>
           <th>
-            <div><input class="form-control form-control-sm" type="number"></div>
+            <div><input class="form-control form-control-sm sumRow" id="idAlmuerzo1" type="number" value=0></div>
           </th>
           <th>
-            <div><input class="form-control form-control-sm" type="number"></div>
+            <div><input class="form-control form-control-sm sumRow" id="idComida1" type="number" value=0></div>
           </th>
           <th>
-            <div><input class="form-control form-control-sm" type="number"></div>
+            <div><input class="form-control form-control-sm sumRow" id="idSuplemento1" type="number" value=0></div>
           </th>
           <th>
-            <div><input class="form-control form-control-sm" type="number"></div>
+            <div><input class="form-control form-control-sm sumRow" id="idTransporte1" type="number" value=0></div>
           </th>
           <th>
-            <div><input class="form-control form-control-sm" type="number"></div>
+            <div><input class="form-control form-control-sm sumRow" id="idAlojamiento1" type="number" value=0></div>
           </th>
           <th>
-            <div><input class="form-control form-control-sm" type="number"></div>
+            <div><input class="form-control form-control-sm sumRow" id="idOtro1" type="number" value=0></div>
           </th>
           <th>
-            <div><input class="form-control form-control-sm inputValor"  type="number"></div>
+            <div><input class="form-control form-control-sm " id="idTotal1" type="number" value=0></div>
           </th>
           <th>
-            <div><input class="form-control form-control-sm" id="trm1" type="number"></div>
+            <div><input class="form-control form-control-sm" id="trm1" type="number" value=0></div>
           </th>
           <th>
-            <div><input class="form-control form-control-sm" id="valorPesos1" type="number"></div>
+            <div><input class="form-control form-control-sm totalPesos" id="valorPesos1" type="number" value=0></div>
           </th>
           <th>
             <i id="addRowAnticipos" class="deleteRow bi bi-plus-circle-fill"></i>
@@ -180,15 +184,18 @@
 
       </tbody>
     </table>
-  </DIV>
-
+  </div>
+  <div class="totalHeader">
+      <h3>Total anticipo:</h3><h3 id="TotalAnticipo">0</h3>
+      <input id="total_anticipo" type="hidden" value=0>
+    </div>
   <br>
 
   <br>
   <br>
 
   <div class="d-flex justify-content-center">
-    <button type="button" class="btn btn-primary" data-bs-toggle="button">ENVIAR</button>
+    <button type="button" id="enviarAnticipo" class="btn btn-primary" data-bs-toggle="button">ENVIAR</button>
   </div>
   <br>
 </form>

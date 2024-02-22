@@ -1,6 +1,8 @@
 
 <?php
 $url_base = "http://".$_SERVER['HTTP_HOST']."/contabilidad/";
+include_once '../../lib/helpers.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -82,7 +84,8 @@ $url_base = "http://".$_SERVER['HTTP_HOST']."/contabilidad/";
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="<?php echo $url_base;?>views/boss/anticipos.php">
+          <!-- <a class="nav-link" href="<?php echo  getUrl("Anticipos","anticipos","verAnticipo",false,"indexBoss") .'&id=1'; ?>"> -->
+          <a class="nav-link" href="<?php echo $url_base;?>views/boss/anticipos.php" >
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>credit-card</title>

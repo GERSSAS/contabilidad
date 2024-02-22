@@ -18,6 +18,7 @@ $url_base = "http://" . $_SERVER['HTTP_HOST'] . "/contabilidad/";
   <link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
   <link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <link href="../../assets/css/newCss.css" rel="stylesheet" />
   <link id="pagestyle" href="../../assets/css/soft-ui-dashboard.css?v=1.0.7" rel="stylesheet" />
  <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
