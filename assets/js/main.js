@@ -288,53 +288,10 @@ $(document).ready(function() {
         var rowId = $(this).attr('id').match(/\d+/)[0];
         console.log(rowId);
         console.log(new Intl.NumberFormat('en-US').format(trmValue));
-        $("#trm" + rowId).val(new Intl.NumberFormat('en-US').format(trmValue));
+        $("#trm" + rowId).val(trmValue);
 
     });
 
-
-    $(document).on('change', '.sumRow', async function() {
-
-        var valor = $(this).val();
-
-        console.log(valor);
-
-        var rowId = $(this).attr('id').match(/\d+/)[0];
-
-        var trmValue = $("#trm" + rowId).val();
-
-        console.log(trmValue);
-
-        // let USDollar = new Intl.NumberFormat('en-US', {
-        //     style: 'currency',
-        //     currency: 'USD',
-        // });
-
-        $("#valorPesos" + rowId).val(valor * trmValue);
-
-    });
-
-
-    $(document).on('change', '.inputValor', async function() {
-
-        var valor = $(this).val();
-
-        console.log(valor);
-
-        var rowId = $(this).attr('id').match(/\d+/)[0];
-
-        var trmValue = $("#trm" + rowId).val();
-
-        console.log(trmValue);
-
-        // let USDollar = new Intl.NumberFormat('en-US', {
-        //     style: 'currency',
-        //     currency: 'USD',
-        // });
-
-        $("#valorPesos" + rowId).val(valor * trmValue);
-
-    });
 
 
     var rowTrans = 1;
@@ -397,25 +354,139 @@ $(document).ready(function() {
     $(document).on('click', '#addRowAnticipos', function() {
         rowAnticipos += 1;
         console.log("Hello world!");
-        $('<span class=" fa fa-trash btn_remove_anticipos" style="color:red"></span>').replaceAll("#addRowAnticipos");
+        $('<span class=" fa fa-trash btn_remove_anticipo" style="color:red"></span>').replaceAll("#addRowAnticipos");
         var boton_agregar = '<i id="addRowAnticipos" class="bi bi-plus-circle-fill"></i>';
         var fecha = '<input class="form-control form-control-sm font-weight-bold inputDate" name="dateViaticos[]" id="idDateViaticos' + rowAnticipos + '" type="date">';
-        var desayuno = '<input class="form-control form-control-sm font-weight-bold" type="number">';
-        var almuerzo = '<input class="form-control form-control-sm font-weight-bold" type="number">';
-        var comida = '<input class="form-control form-control-sm font-weight-bold" type="number" >';
-        var suplemento = '<input class="form-control form-control-sm font-weight-bold" type="number" >';
-        var transporte = '<input class="form-control form-control-sm font-weight-bold" type="number" >';
-        var alojamiento = '<input class="form-control form-control-sm font-weight-bold" type="number" >';
-        var otro = '<input class="form-control form-control-sm font-weight-bold" type="number" >';
-        var total = '<input class="form-control form-control-sm font-weight-bold inputValor " id="total' + rowAnticipos + '" type="number" >';
-        var trm = '<input class="form-control form-control-sm font-weight-bold" id="trm' + rowAnticipos + '" type="number" >';
-        var valPesos = '<input class="form-control form-control-sm font-weight-bold" id="valorPesos' + rowAnticipos + '" type="number" >';
+        var desayuno = '<input class="form-control form-control-sm font-weight-bold sumRow" id="idDesayuno' + rowAnticipos + '" type="number" value=0 >';
+        var almuerzo = '<input class="form-control form-control-sm font-weight-bold sumRow" id="idAlmuerzo' + rowAnticipos + '" type="number" value=0>';
+        var comida = '<input class="form-control form-control-sm font-weight-bold sumRow" id="idComida' + rowAnticipos + '" type="number" value=0 >';
+        var suplemento = '<input class="form-control form-control-sm font-weight-bold sumRow" id="idSuplemento' + rowAnticipos + '" type="number" value=0 >';
+        var transporte = '<input class="form-control form-control-sm font-weight-bold sumRow" id="idTransporte' + rowAnticipos + '" type="number" value=0 >';
+        var alojamiento = '<input class="form-control form-control-sm font-weight-bold sumRow" id="idAlojamiento' + rowAnticipos + '" type="number" value=0 >';
+        var otro = '<input class="form-control form-control-sm font-weight-bold sumRow" id="idOtro' + rowAnticipos + '" type="number" value=0 >';
+        var total = '<input class="form-control form-control-sm font-weight-bold " id="idTotal' + rowAnticipos + '" type="number" value=0>';
+        var trm = '<input class="form-control form-control-sm font-weight-bold" id="trm' + rowAnticipos + '" type="number" value=0 >';
+        var valPesos = '<input class="form-control form-control-sm font-weight-bold totalPesos" id="valorPesos' + rowAnticipos + '" type="number" value=0 >';
 
         tablaAnticipos.row.add([fecha, desayuno, almuerzo, comida, suplemento, transporte, alojamiento, otro, total, trm, valPesos, boton_agregar]).draw(true);
         tablaAnticipos.columns.adjust().draw();
 
     });
 
+
+
+    $(document).on('change', '.sumRow', async function() {
+
+        let rowId = $(this).attr('id').match(/\d+/)[0];
+        let desayuno = parseFloat($("#idDesayuno" + rowId).val());
+        let almuerzo = parseFloat($("#idAlmuerzo" + rowId).val());
+        let comida = parseFloat($("#idComida" + rowId).val());
+        let suplemento = parseFloat($("#idSuplemento" + rowId).val());
+        let transporte = parseFloat($("#idTransporte" + rowId).val());
+        let alojamiento = parseFloat($("#idAlojamiento" + rowId).val());
+        let otro = parseFloat($("#idOtro" + rowId).val());
+
+        let trmValue = $("#trm" + rowId).val();
+
+        console.log(trmValue);
+
+        let total = desayuno + almuerzo + comida + suplemento + transporte + alojamiento + otro;
+
+        $("#idTotal" + rowId).val(total);
+
+        $("#valorPesos" + rowId).val(total * trmValue);
+
+        sumTotal();
+
+    });
+
+    let totalRows = 0
+
+    function sumTotal() {
+        let totals = document.querySelectorAll('.totalPesos');
+        let sumResult = 0;
+
+        totals.forEach((elemento) => {
+            sumResult = sumResult + parseFloat(elemento.value);
+            console.log(elemento.id + "=" + elemento.value);
+
+        });
+
+        $("#TotalAnticipo").text(sumResult);
+        $("#total_anticipo").val(sumResult);
+
+    }
+
+
+    $(document).on('click', '#enviarAnticipo', function() {
+
+        console.log("enviar anticipo");
+
+        const formAnticipo = new FormData();
+
+        var elementos = document.querySelectorAll(
+            'input[type="text"], input[type="date"], input[type="hidden"], input[type=number], SELECT'
+        );
+
+
+        elementos.forEach((elemento) => {
+            formAnticipo.append(elemento.id, elemento.value);
+            console.log(elemento.id + "=" + elemento.value);
+        });
+
+        let url = $("#formulario_anticipo").attr("data-url");
+
+        $.ajax({
+            type: "POST",
+            url: "../../" + url,
+            data: formAnticipo,
+            processData: false,
+            contentType: false, // Envía datos en el formato correcto
+            success: function(response) {
+                // El código PHP en 'summary.php' puede procesar los datos
+                console.log(response);
+
+                if (response == 1) {
+
+
+                    Swal.fire({
+                        title: "El anticipo se ha creado exitosamente",
+                        showCancelButton: false,
+                        confirmButtonText: "Ok",
+                        icon: "success",
+                    }).then((result) => {
+
+                        if (result.isConfirmed) {
+                            location.href = 'http://localhost/contabilidad/views/public/indexPublic.php';
+                        }
+                    });
+
+
+                } else {
+
+                }
+            },
+        });
+
+    });
+
+
+    function send() {
+
+        // var $items = $('#firstName, #lastName,#phoneNumber,#address ')
+
+        // var obj = {}
+
+        // $items.each(function() {
+        //     obj[this.id] = $(this).val();
+        // })
+
+        // var json = JSON.stringify(obj);
+
+        var table = document.getElementById('TablaAnticipos');
+        $("#TotalAnticipo").text(table.rows.length - 1);
+
+    }
 });
 
 async function fetchTRM(date) {

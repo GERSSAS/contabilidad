@@ -1,6 +1,8 @@
 <?php
-include("dbconection/dbConection.php");
-include("controller/controllerLogin.php");
+include_once 'lib/helpers.php';
+if (isset($_GET['modulo'])) {
+	resolve();
+}
 ?>
 
 <!DOCTYPE html>
@@ -40,7 +42,7 @@ include("controller/controllerLogin.php");
                             </div>
                             <div class="card-body">
 
-                                <form method="post" role="form">
+                                <form data-url="<?php echo getUrl("Login","login","login",false,"ajax") ?>" class="formulario_login" role="form">
                                     <label for="correo">CORREO</label>
                                     <div class="mb-3">
                                         <input id="correo" name="correo" class="form-control" type="email" placeholder="correo:" aria-label="correo" aria-describedby="email-addon" autofocus>
@@ -51,7 +53,7 @@ include("controller/controllerLogin.php");
                                     </div>
 
                                     <div class="text-center">
-                                        <button name="btnIngresar" type="submit" class="btn bg-gradient-info w-100 mt-4 mb-0" value="Login" onclick="validateLoginForm()"> INGRESAR </button>
+                                        <button name="btnIngresar" type="submit" class="btn bg-gradient-info w-100 mt-4 mb-0" value="Login" onclick=""> INGRESAR </button>
                                     </div>
                                 </form>
                             </div>
@@ -84,6 +86,7 @@ include("controller/controllerLogin.php");
     <script src="assets/js/core/bootstrap.min.js"></script>
     <script src="assets/js/plugins/perfect-scrollbar.min.js"></script>
     <script src="assets/js/plugins/smooth-scrollbar.min.js"></script>
+    <script src="assets/js/login.js"></script>
     <!-- <script>
         function validateLoginForm() {
             let correo = document.getElementById('correo').value;
