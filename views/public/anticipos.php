@@ -46,24 +46,22 @@ include("template/header.php");
       </div>
 
       <div class="col-3">
-        <label for="periodo">Período:</label>
-        <input id="periodo" name="periodo" type="text" class="form-control form-control-sm">
+        <label>Fecha de inicio:</label>
+        <input id="fecha_solicitud" name="fecha_solicitud" type="date" class="form-control form-control-sm">
+      </div>
+      <div class="col-3">
+        <label>Fecha de fin:</label>
+        <input id="fecha_entrega" name="fecha_entrega" type="date" class="form-control form-control-sm">
       </div>
 
-      <div class="col-3">
-        <label>Moneda:</label>
-        <select id="moneda" name="moneda" class="form-select form-select-sm">
-          <option value="1" class="form-control">$Peso colombiano</option>
-          <option value="2">$Dolar USD</option>
-        </select>
-      </div>
+     
     </div>
 
     <br>
 
     <div class="row">
       <div class="col-6">
-        <label for="jefe" class="form-label">Jefe</label>
+        <label for="jefe" class="form-label">Aprobador</label>
         <select name="jefe" id="jefe" class="form-select form-select-sm" aria-label=".form-select-sm example">
           <option value=""></option>
           <option value="1">ALBA NARANJO</option>
@@ -125,7 +123,7 @@ include("template/header.php");
   <br>
   <div class="container table-responsive">
 
-    <table id="TablaAnticipos" class="table " style="width:1300px">
+  <table id="TablaAnticipos" class="table " style="width:1300px">
       <thead class="table-light">
         <tr>
           <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-6">FECHA</th>
@@ -184,6 +182,7 @@ include("template/header.php");
 
       </tbody>
     </table>
+    
   </div>
   <div class="totalHeader">
       <h3>Total anticipo:</h3><h3 id="TotalAnticipo">0</h3>

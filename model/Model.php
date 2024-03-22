@@ -1,9 +1,7 @@
 <?php 
 include_once 'dbConection.php';
 
-
 class MasterModel extends Connection{
-
     public function insert($sql){
         $result=mysqli_query($this->getConnect(),$sql);
         return $result;
@@ -28,6 +26,4 @@ class MasterModel extends Connection{
         return end($account)+1;
     }
 }
-
-
 ?>
