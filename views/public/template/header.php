@@ -44,39 +44,53 @@ $url_base = "http://" . $_SERVER['HTTP_HOST'] . "/contabilidad/";
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light" id="ftco-navbar">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <div class="logo">
-            <img src="/gers_contable/img/logo_gers_sin_fondo.png" height="40px">
-        </div>
-        <div class="nav nav-tabs" id="nav-tab" role="tablist">
-            <ul class="navbar-nav ml-auto mr-md-3">
-                <li class="nav-link">
-                    <a href="<?php echo $url_base; ?>views/public/indexPublic.php">INICIO</a>
+        <a class="navbar-brand" href="#">
+            <img src="../../assets/img/logo1.png" height="50px" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo $url_base; ?>views/public/indexPublic.php">INICIO</a>
                 </li>
-                <li class="nav-link">
-                    <a href="<?php echo $url_base; ?>views/public/anticipos.php">ANTICIPOS</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo $url_base; ?>views/public/anticipos.php">ANTICIPOS</a>
                 </li>
-                <li class="nav-link">
-                    <a href="<?php echo $url_base; ?>views/public/relacionGastos.php">RELACION DE GASTOS</a>
-                </li> 
-                <li class="nav-link">
-                    <a href="<?php echo $url_base; ?>views/public/viaticos.php">VIATICOS</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        LEGALIZACIÓN DE GASTOS
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item"
+                                href="<?php echo $url_base; ?>views/public/relacionGastos.php">RELACIÓN DE GASTOS</a></li>
+                        <li><a class="dropdown-item"
+                                href="<?php echo $url_base; ?>views/public/viaticos.php">VIATÍCOS</a></li>
+                        <li><a class="dropdown-item"
+                                href="<?php echo $url_base; ?>views/public/transportes.php">TRANSPORTE</a></li>
+                        <li><a class="dropdown-item"
+                                href="<?php echo $url_base; ?>views/public/otrosGastos.php">OTROS GASTOS</a></li>
+                    </ul>
                 </li>
-                <li class="nav-link">
-                    <a href="<?php echo $url_base; ?>views/public/transportes.php">TRANSPORTE</a>
-                </li>
-                <li class="nav-link">
-                    <a href="<?php echo $url_base; ?>views/public/otrosGastos.php">OTROS GASTOS</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo $url_base; ?>views/public/tarjetas.php">TARJETAS</a>
                 </li>
             </ul>
-
-            <a href="javascript:;" class="nav-link text-body font-weight-bold px-0">
-                <i class="fa fa-user me-sm-1"></i>
-                <span class="d-sm-inline d-none">CERRAR SESION</span>
-            </a>
+            <div class="d-flex">
+                <a href="javascript:;" class="nav-link text-body font-weight-bold px-0">
+                    <i class="fa fa-user me-sm-1"></i>
+                    <span class="d-sm-inline d-none">CERRAR SESION</span>
+                </a>
+            </div>
         </div>
     </div>
-</nav></body>
+</nav>
+
+</body>
 
 <div class="container">

@@ -133,7 +133,6 @@
           <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-6">ALOJAMIENTO</th>
           <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">OTRO</th>
           <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">TOTAL</th>
-          <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">TRM</th>
           <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">VAL-PESOS</th>
           <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"></th>
         </tr>
@@ -167,9 +166,7 @@
           <th>
             <div><input class="form-control form-control-sm inputValor"  type="number"></div>
           </th>
-          <th>
-            <div><input class="form-control form-control-sm" id="trm1" type="number"></div>
-          </th>
+          
           <th>
             <div><input class="form-control form-control-sm" id="valorPesos1" type="number"></div>
           </th>

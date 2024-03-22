@@ -56,7 +56,7 @@
     <br>
     <div class="row">
       <div class="col-6">
-        <label for="jefe" class="form-label">Jefe</label>
+        <label for="jefe" class="form-label">Aprobador</label>
         <select name="jefe" id="jefe" class="form-select form-select-sm" aria-label=".form-select-sm example">
           <option value=""></option>
           <option value="alba.naranjo@gers.com">ALBA NARANJO</option>
@@ -132,6 +132,54 @@
   </div>
   <br>
   <BR>
+
+
+
+  <div class="row ">
+    <div class="col-10 row">
+    <div class="col-2 ">
+        <label for="fecha">FECHA:</label>
+        <input class="form-control form-control-sm font-weight-bold inputDate" id="idDateViaticos2" type="date" required>
+    </div>
+    <div class="col-2 ">
+        <label for="contrato">CONTRATO:</label>
+        <input class="form-control form-control-sm font-weight-bold" id="contrato" type="text" required>
+    </div>
+    <div class="col-2">
+        <label for="concepto">CONCEPTO:</label>
+        <input class="form-control form-control-sm" type="TEXT">
+    </div>
+    <div class="col-2">
+        <label for="valor1">VALOR:</label>
+        <input class="form-control form-control-sm inputValor" id="valor1" type="number">
+    </div>
+    <div class="col-2">
+        <label for="trm1">TRM:</label>
+        <input class="form-control form-control-sm trmRow" id="trm1" type="text">
+    </div>
+    <div class="col-2 ">
+        <label for="valorPesos1">VAL-PESOS:</label>
+        <input class="form-control form-control-sm" id="valorPesos1" type="number">
+    </div>
+    </div>
+    <div class="col-2 row">
+    <div class="col-10">
+        <label for="total">TOTAL:</label>
+        <input class="form-control form-control-sm font-weight-bold inputValor" id="total1" type="number" readonly>
+    </div>
+    <div class="col-2 d-flex align-items-end">
+    <i id="addRowViaticos" class="deleteRow bi bi-plus-circle-fill"></i>
+    </div>    
+    </div>
+    </div>
+    
+   
+    
+        <button class="btn btn-primary mt-2" id="calcularTotal">Calcular Total</button>
+        </div>
+
+<br>
+<br>
   <div class="container table-responsive">
 
     <table id="tablaOtros" class="table table-sm">

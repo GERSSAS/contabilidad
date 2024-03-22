@@ -76,7 +76,7 @@
             </div>
 
             <div class="col-3">
-                <label for="jefe" class="form-label">Jefe</label>
+                <label for="jefe" class="form-label">Aprobador</label>
                 <select name="jefe" id="jefe" class="form-select form-select-sm" aria-label=".form-select-sm example">
                     <option value=""></option>
                     <option value="alba.naranjo@gers.com">ALBA NARANJO</option>
@@ -112,7 +112,56 @@
 
         <br>
         <br>
+     
+</div>
 
+<div class="row ">
+    <div class="col-10 row">
+    <div class="col-2 ">
+        <label for="fecha">FECHA:</label>
+        <input class="form-control form-control-sm font-weight-bold inputDate" id="idDateViaticos2" type="date" required>
+    </div>
+    
+    
+    <div class="col-2 ">
+        <label for="contrato">CONTRATO:</label>
+        <input class="form-control form-control-sm font-weight-bold" id="contrato" type="text" required>
+    </div>
+    <div class="col-2">
+        <label for="desayuno">DESAYUNO:</label>
+        <input class="form-control form-control-sm font-weight-bold" id="desayuno" type="number" min="0">
+    </div>
+    <div class="col-2">
+        <label for="almuerzo">ALMUERZO:</label>
+        <input class="form-control form-control-sm font-weight-bold" id="almuerzo" type="number" min="0">
+    </div>
+    <div class="col-2">
+        <label for="comida">COMIDA:</label>
+        <input class="form-control form-control-sm font-weight-bold" id="comida" type="number" min="0">
+    </div>
+    <div class="col-2 ">
+        <label for="suplemento">SUPLEMENTO:</label>
+        <input class="form-control form-control-sm font-weight-bold" id="suplemento" type="number" min="0">
+    </div>
+    </div>
+    <div class="col-2 row">
+    <div class="col-10">
+        <label for="total">TOTAL:</label>
+        <input class="form-control form-control-sm font-weight-bold inputValor" id="total1" type="number" readonly>
+    </div>
+    <div class="col-2 d-flex align-items-end">
+    <i id="addRowViaticos" class="deleteRow bi bi-plus-circle-fill"></i>
+    </div>    
+    </div>
+    </div>
+    
+   
+    
+        <button class="btn btn-primary mt-2" id="calcularTotal">Calcular Total</button>
+        </div>
+
+<br>
+<br>
         <div class="container table-responsive">
             <table id="ViaticosTable" class="table table-sm">
                 <thead class="table-light">
@@ -174,6 +223,77 @@
             <button type="submit" class="btn btn-primary" data-bs-toggle="button">ENVIAR</button>
         </div>
 </form>
+<script>
+    document.getElementById('calcularTotal').addEventListener('click', function() {
+        const desayuno = parseFloat(document.getElementById('desayuno').value) || 0;
+        const almuerzo = parseFloat(document.getElementById('almuerzo').value) || 0;
+        const comida = parseFloat(document.getElementById('comida').value) || 0;
+        const suplemento = parseFloat(document.getElementById('suplemento').value) || 0;
+        const total = desayuno + almuerzo + comida + suplemento;
+        document.getElementById('total1').value = total;
+    });
 
+    let rowId = 2;
+
+document.getElementById('addRowViaticos').addEventListener('click', function() {
+  const row = document.createElement('div');
+  row.className = 'col-10 row';
+  row.innerHTML = `
+    <div class="col-2">
+        <label for="fecha${rowId}">FECHA:</label>
+        <input class="form-control form-control-sm font-weight-bold inputDate" id="fecha${rowId}" type="date" required>
+    </div>
+
+    <div class="col-2">
+        <label for="contrato${rowId}">CONTRATO:</label>
+        <input class="form-control form-control-sm font-weight-bold" id="contrato${rowId}" type="text" required>
+    </div>
+    <div class="col-2">
+        <label for="desayuno${rowId}">DESAYUNO:</label>
+        <input class="form-control form-control-sm font-weight-bold" id="desayuno${rowId}" type="number" min="0">
+    </div>
+    <div class="col-2">
+        <label for="almuerzo${rowId}">ALMUERZO:</label>
+        <input class="form-control form-control-sm font-weight-bold" id="almuerzo${rowId}" type="number" min="0">
+    </div>
+    <div class="col-2">
+        <label for="comida${rowId}">COMIDA:</label>
+        <input class="form-control form-control-sm font-weight-bold" id="comida${rowId}" type="number" min="0">
+    </div>
+    <div class="col-2 ">
+        <label for="suplemento${rowId}">SUPLEMENTO:</label>
+        <input class="form-control form-control-sm font-weight-bold" id="suplemento${rowId}" type="number" min="0">
+    </div>
+    <div class="col-2 row">
+    <div class="col-10">
+        <label for="total${rowId}">TOTAL:</label>
+        <input class="form-control form-control-sm font-weight-bold inputValor" id="total${rowId}" type="number" readonly>
+    </div>
+    <div class="col-2 d-flex align-items-end">
+      <i class="deleteRow bi bi-x-circle-fill" onclick="deleteRow(${rowId})"></i>
+    </div>
+  </div>
+  `;
+  document.getElementById('row-container').appendChild(row);
+  rowId++;
+});
+
+function deleteRow(id) {
+  const row = document.getElementById(`fecha${id}`).parentElement.parentElement;
+  row.remove();
+}
+document.getElementById('calcularTotal').addEventListener('click', function() {
+  let total = 0;
+  for (let i = 1; i < rowId; i++) {
+    const desayuno = parseFloat(document.getElementById(`desayuno${i}`).value) || 0;
+    const almuerzo = parseFloat(document.getElementById(`almuerzo${i}`).value) || 0;
+    const comida = parseFloat(document.getElementById(`comida${i}`).value) || 0;
+    const suplemento = parseFloat(document.getElementById(`suplemento${i}`).value) || 0;
+    const totalValue = parseFloat(document.getElementById(`total${i}`).value) || 0;
+    total += totalValue;
+  }
+  document.getElementById('total1').value = total;
+});
+</script>
 
 <?php include("template/footer.php"); ?>
